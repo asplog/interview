@@ -1,0 +1,2 @@
+void reverse(char*str)を設計せよ
+//文字列はPascal方式ではない
