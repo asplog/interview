@@ -11,10 +11,11 @@ node_t*	list_append(node_t*root,int value)
 	}
 	else
 	{
-		while(root->next)root=root->next;
-		root->next=malloc(sizeof(node_t));
-		root->next->next=0;
-		root->next->value=value;
+		node_t*iter=root;
+		while(iter->next)iter=iter->next;
+		iter->next=malloc(sizeof(node_t));
+		iter->next->next=0;
+		iter->next->value=value;
 	}
 	return	root;
 }
