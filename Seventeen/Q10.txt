@@ -1,0 +1,21 @@
+XMLは冗長なため
+タグをあらかじめ定義された整数値に写像することでコード化される
+言語文法は次のとおり
+
+Element		-->	Tag attributes END children END
+Attribute	-->	Tag Value
+END		-->	0
+Tag		-->	事前に定義されたint値へのmap
+Value		-->	文字列値 END
+
+たとえば次のXMLデータは以下のように圧縮される
+familky		->	1
+person		->	2
+firstName	->	3
+lastName	->	4
+state		->	5
+
+<family lastName="MacDowell" state="CA">
+	<person firstName="Gayle">some message</person>
+</family>
+1 4 "MacDowerll" 5 "CA" 0 2 3 "Gayle" some message 0 0

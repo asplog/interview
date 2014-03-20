@@ -1,0 +1,7 @@
+イヌとネコしか入れない，先入先出式の動物病院がある．
+以下のメソッドを実装せよ
+enqueue
+dequeueAny
+dequeueDog
+dequeueCat
+

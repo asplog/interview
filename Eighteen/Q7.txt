@@ -1,0 +1,7 @@
+単語のリストが与えられたとき，リスト内の単語であって
+リスト内の単語を並べて作る事ができる最も長い単語をかえすプログラムを書いて下さい
+
+i.e.
+入力: cat, banana, dog, nana, walk, walker, dogwalker
+出力: dogwalker
+

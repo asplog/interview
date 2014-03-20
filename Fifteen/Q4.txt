@@ -1,0 +1,20 @@
+テーブルの結合joinにはどんな種類がありますか
+どう違うか
+様々な状況を想定して状況に適した種類を説明してください
+
+Apartment			Complexes
+AptID:		int		ComplexID:	int
+UnitNumber:	varchar		ComplexName:	varchar
+BuildingID:	int
+
+Buildings			AptTenalts
+BuildingID:	int		TenantID:	int
+ComplexID:	int		AptID:		int
+BuildingName:	varchar
+Address:	varchar
+
+Tenants				Requests
+TenantID:	int		RequestID:	int
+TenantName:	varchar		Status:		varchar
+				AptID:		int
+				Description:	varchar

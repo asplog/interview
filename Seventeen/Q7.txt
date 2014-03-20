@@ -1,0 +1,3 @@
+任意の整数に対して
+その整数を英語
+One Thousand, Two Hundred Thirty Fourなどで表示するコードを書け

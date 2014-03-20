@@ -1,0 +1,14 @@
+BiNodeという2つのノードへ接続するデータ構造を考えます
+class BiNode
+{
+	public BiNode node1,node2;
+	public int data
+}
+BiNodeは2分木(node1->l,node2->r)と
+双方連結リスト(node1->p,node2->n)
+このとき，BiNodeによって表現された2分探索木を
+双方向連結リストに変換するメソッドを実装してください
+ただしノードの値は元のソート済み順序を保ち
+適切に操作できるようにしなければならない
+
+

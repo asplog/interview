@@ -1,7 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define __N__ 4
-
+#define __N__ 3
+unsigned int to_addr(unsigned int w,unsigned int h,unsigned int N)
+{
+	return h*N+w;
+}
+void rotate(char*byte,unsigned int S,unsigned int N)
+{
+	register char*buffer=memcpy(malloc(S*N*N),byte,S*N*N);
+	register unsigned int w,W;
+	register unsigned int h,H;
+	for(h=0,H=N;h<H;++h)
+	{
+		for(w=0,W=N;w<W;++w)
+		{
+			byte[to_addr(w,h,N)]=buffer[to_addr(H-h-1,w,N)];
+		}
+	}
+}
 void transpose(char*byte,unsigned int S,unsigned int N)
 {
 	register unsigned int length = N * N;
@@ -45,7 +61,8 @@ int main()
 	shuffle(map,N);
 	fprintf(stdout,"src\n");
 	dump(map,N);
-	transpose(map,S,N);
+	rotate(map,S,N);
+	//transpose(map,S,N);
 	fprintf(stdout,"dst\n");
 	dump(map,N);
 	free(map);

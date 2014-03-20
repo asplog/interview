@@ -1,0 +1,21 @@
+人
+会社
+社員
+のデータベース実体関連図を書いて下さい
+
+Apartment			Complexes
+AptID:		int		ComplexID:	int
+UnitNumber:	varchar		ComplexName:	varchar
+BuildingID:	int
+
+Buildings			AptTenalts
+BuildingID:	int		TenantID:	int
+ComplexID:	int		AptID:		int
+BuildingName:	varchar
+Address:	varchar
+
+Tenants				Requests
+TenantID:	int		RequestID:	int
+TenantName:	varchar		Status:		varchar
+				AptID:		int
+				Description:	varchar

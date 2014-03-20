@@ -1,0 +1,13 @@
+次のコードがある
+public class Foo
+{
+	public Foo(){...}
+	public void first(){...}
+	public void second(){...}
+	public void third(){...}
+}
+Fooの同じインスタンスが3つの異なるスレッドABCに渡され，
+スレッドAがfirst
+スレッドBがsecond
+スレッドCがthirdを呼ぶ
+このとき，first> second> thirdと呼ばれたことを確認する方法を設計せよ

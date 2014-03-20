@@ -1,0 +1,7 @@
+文章の空白を消してしまった
+与えられた辞書を用いて文章を適切に復元せよ
+なお，適切とは判別できない文字数が最小限となる意味
+
+i.e.:
+input: 	"jesslookedjustliketimeherbrother"
+output:	"JESS looked just like TIM her brother"

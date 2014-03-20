@@ -1,0 +1,18 @@
+全ての建築のリストとRequestのステータスがOpenになっているアパートの数を得るSQLクエリを書け
+
+Apartment			Complexes
+AptID:		int		ComplexID:	int
+UnitNumber:	varchar		ComplexName:	varchar
+BuildingID:	int
+
+Buildings			AptTenalts
+BuildingID:	int		TenantID:	int
+ComplexID:	int		AptID:		int
+BuildingName:	varchar
+Address:	varchar
+
+Tenants				Requests
+TenantID:	int		RequestID:	int
+TenantName:	varchar		Status:		varchar
+				AptID:		int
+				Description:	varchar

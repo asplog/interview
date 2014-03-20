@@ -1,0 +1,20 @@
+学生の成績情報を持ったデータベースをイメージせよ
+このデータベースをどのようにするか設計し
+平均点上位10%の学生名簿を取得するSQL分を書け
+
+Apartment			Complexes
+AptID:		int		ComplexID:	int
+UnitNumber:	varchar		ComplexName:	varchar
+BuildingID:	int
+
+Buildings			AptTenalts
+BuildingID:	int		TenantID:	int
+ComplexID:	int		AptID:		int
+BuildingName:	varchar
+Address:	varchar
+
+Tenants				Requests
+TenantID:	int		RequestID:	int
+TenantName:	varchar		Status:		varchar
+				AptID:		int
+				Description:	varchar

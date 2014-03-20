@@ -1,0 +1,11 @@
+整数の列を読み取っているのを想像せよ
+定期的にある値xの順位(x未満の値の数)を調査できるようにしたい
+この作業を行うデータ構造とアルゴリズムを実装せよ
+
+つまり値が生成されたときに呼ばれるtrack(int x)というメソッドと
+x未満の個数を返すgetRankOfNumber(int x)というメソッドを実装せよ
+
+Stream(in order of appearance): 5, 1, 4, 4, 5, 9, 7, 13, 3
+getRankOfNumber(1) = 0
+getRankOfNumber(3) = 1
+getRankOfNumber(4) = 3
