@@ -18,7 +18,7 @@ int node_get_balanced_height(const node_t*node,int depth)
 	{
 		int l=node_get_balanced_height(node->gauche,depth+1);
 		int r=node_get_balanced_height(node->droite,depth+1);
-		depth=0<l&&0<r&&abs(l-r)<2?max(l,r):-1;
+		depth=0<l&&0<r&&(l-r)-(((l-r)<<1)&((l-r)>>31))<2?r+(l-r)&((~(l-r)^(l^r)&((l-r)^l))>>31):-1;
 #ifdef __DEBUG__
 		fprintf(stderr,"%d(%d) %d %d(%d) is %d\n",node->gauche?node->gauche->value:-1,l,node->value,node->droite?node->droite->value:-1,r,depth);	
 #endif
@@ -27,10 +27,8 @@ int node_get_balanced_height(const node_t*node,int depth)
 }
 int main()
 {
-	int depth;
-	node_t*tree=0;
-	if(1)
 	{
+		node_t*tree=0;
 		bst_add(&tree,3);
 		bst_add(&tree,1);
 		bst_add(&tree,4);
@@ -39,17 +37,20 @@ int main()
 		bst_add(&tree,9);
 		bst_add(&tree,2);
 		bst_add(&tree,6);
+		fprintf(stdout,"Tree is %s\n",0<node_get_balanced_height(tree,0)?"balanced":"not balanced");
+		node_linked_free(tree);
 	}
-	else
+//	else
 	{
+		node_t*tree=0;
 		bst_add(&tree,4);
 		bst_add(&tree,2);
 		bst_add(&tree,6);
 		bst_add(&tree,1);
 		bst_add(&tree,3);
 		bst_add(&tree,5);
+		fprintf(stdout,"Tree is %s\n",0<node_get_balanced_height(tree,0)?"balanced":"not balanced");
+		node_linked_free(tree);
 	}
-	depth=node_get_balanced_height(tree,0);
-	fprintf(stdout,"Tree is %s\n",0<depth?"balanced":"not balanced");
 	return 0;
 }
