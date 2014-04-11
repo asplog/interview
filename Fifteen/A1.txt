@@ -1,0 +1,1 @@
+SELECT Tenants.TenantID from Tenants join (SELECT * FROM AptTenants JOIN Apartment AS P WHERE AptTenants.UnitNumber > 1) WHERE P.AptID==Tenants.TenantID
