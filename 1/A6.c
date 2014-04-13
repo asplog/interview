@@ -17,6 +17,7 @@ void rotate(char*byte,unsigned int S,unsigned int N)
 			byte[to_addr(w,h,N)]=buffer[to_addr(H-h-1,w,N)];
 		}
 	}
+	free(buffer);
 }
 void transpose(char*byte,unsigned int S,unsigned int N)
 {
