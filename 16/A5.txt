@@ -1,0 +1,3 @@
+withLock(a=a*2+1)
+withLock(a=a*4+1)
+withLock(a=a*1+1)
